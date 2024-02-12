@@ -8,8 +8,11 @@ int main()
     cout << "Enter dividend: ";
     cin >> dividend;
 
-    cout << "Enter divisor: ";
-    cin >> divisor;
+    // Input validation for divisor not equal to zero
+    do {
+        cout << "Enter divisor (non-zero): ";
+        cin >> divisor;
+    } while (divisor == 0);
 
     quotient = dividend / divisor;
     remainder = dividend % divisor;
